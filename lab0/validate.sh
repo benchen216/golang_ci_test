@@ -21,6 +21,19 @@ else
   fi
 fi
 
+cp $solution_path/username.go .
+result=$(go run helloworld.go 2>&1) ; ret=$?
+if [ $ret -ne 0 ] ; then
+  echo "\"./username.go\" fails ; NO POINT"
+else
+  echo "\"./username.go username.go\" output: \"$result\""
+  if [ "$(echo $username)" != "$(echo $result)" ] ; then
+    echo "wrong number ; NO POINT"
+  else
+    echo "GET POINT 1"
+  fi
+fi
+
 echo "deleting working directory $tmp_dir"
 rm -rf $tmp_dir
 
