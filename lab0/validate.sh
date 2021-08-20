@@ -28,7 +28,7 @@ if [ $ret -ne 0 ] ; then
 else
   echo "\"go run username.go\" output: \"$result\""
   if [ "${PWD##*/}" != "$(echo $result)" ] ; then
-    echo "$(dirname "$solution_path") wrong answer ; NO POINT"
+    echo "${PWD##*/} wrong answer ; NO POINT"
   else
     echo "GET POINT 1"
   fi
