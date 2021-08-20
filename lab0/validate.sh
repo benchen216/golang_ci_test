@@ -15,7 +15,7 @@ if [ $ret -ne 0 ] ; then
 else
   echo "\"go run helloworld.go\" output: \"$result\""
   if [ "hello world" != "$(echo $result)" ] ; then
-    echo "wrong number ; NO POINT"
+    echo "wrong answer ; NO POINT"
   else
     echo "GET POINT 1"
   fi
@@ -28,7 +28,8 @@ if [ $ret -ne 0 ] ; then
 else
   echo "\"go run username.go\" output: \"$result\""
   if [ "$(echo $username)" != "$(echo $result)" ] ; then
-    echo "wrong number ; NO POINT"
+    echo $username
+    echo "wrong answer ; NO POINT"
   else
     echo "GET POINT 1"
   fi
