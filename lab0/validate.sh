@@ -11,9 +11,9 @@ cd $tmp_dir
 cp $solution_path/helloworld.go .
 result=$(go run helloworld.go 2>&1) ; ret=$?
 if [ $ret -ne 0 ] ; then
-  echo "\"./helloworld.go\" fails ; NO POINT"
+  echo "\"go run helloworld.go\" fails ; NO POINT"
 else
-  echo "\"./helloworld.go helloworld.go\" output: \"$result\""
+  echo "\"go run helloworld.go\" output: \"$result\""
   if [ "hello world" != "$(echo $result)" ] ; then
     echo "wrong number ; NO POINT"
   else
@@ -22,11 +22,11 @@ else
 fi
 
 cp $solution_path/username.go .
-result=$(go run helloworld.go 2>&1) ; ret=$?
+result=$(go run username.go 2>&1) ; ret=$?
 if [ $ret -ne 0 ] ; then
-  echo "\"./username.go\" fails ; NO POINT"
+  echo "\"go run username.go\" fails ; NO POINT"
 else
-  echo "\"./username.go username.go\" output: \"$result\""
+  echo "\"go run username.go\" output: \"$result\""
   if [ "$(echo $username)" != "$(echo $result)" ] ; then
     echo "wrong number ; NO POINT"
   else
