@@ -55,6 +55,7 @@ jobs:
           pip install selenium
           python3 -m pip install --upgrade pip
           python3 -m pip install --upgrade selenium
+          python3 -m pip install webdriver-manager
           sudo apt install -y software-properties-common
           sudo add-apt-repository -y ppa:system76/pop
           sudo apt update
