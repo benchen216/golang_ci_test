@@ -11,6 +11,7 @@ options = Options()
 options.headless = True
 options.add_argument('--no-sandbox') # https://stackoverflow.com/a/45846909
 options.add_argument('--disable-dev-shm-usage') # https://stackoverflow.com/a/50642913
-chrome = Chrome(ChromeDriverManager(version="83.0.4103.39").install(),options=options)
+chrome = Chrome("/usr/lib/chromium-browser/chromedriver",options=options)
 
+#ChromeDriverManager(version="83.0.4103.39").install()
 chrome.get(f"http://0.0.0.0/index.html")
